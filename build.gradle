@@ -1,11 +1,11 @@
-apply plugin: 'java'
-
 plugins {
     id 'jacoco'
 }
+
+apply plugin: 'java'
+
 jacoco {
     toolVersion = "0.8.8"
-    reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
 }
 jacocoTestReport {
     dependsOn test // tests are required to run before generating the report
